@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="350.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LaunchController">
+   <children>
+      <Button fx:id="newClubButton" layoutX="133.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleNewClub" text="New Club">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="openButton" layoutX="148.0" layoutY="248.0" mnemonicParsing="false" onAction="#handleOpen" text="Open...">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="50.0" layoutY="69.0" text="Club Manager">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
