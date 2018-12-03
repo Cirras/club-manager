@@ -49,7 +49,8 @@ public class LaunchController {
 
                 Context.getContext().setCurrentClub(club);
                 moveToClubDataView();
-            } catch (IOException | ClassNotFoundException e) {
+            }
+            catch (IOException | ClassNotFoundException e) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to load club!", ButtonType.OK);
                 alert.showAndWait();
             }
@@ -61,7 +62,7 @@ public class LaunchController {
             Parent root = FXMLLoader.load(getClass().getResource("clubData.fxml"));
             Stage stage = new Stage();
             stage.setTitle("IntegraDev Club Manager");
-            stage.setScene(new Scene(root, 792, 600));
+            stage.setScene(new Scene(root, 775, 600));
             stage.setResizable(false);
             stage.show();
 

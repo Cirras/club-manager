@@ -130,6 +130,11 @@ public class ClubDataController {
     @FXML
     void handleRemoveClubMember() {
         int index = clubMemberList.getSelectionModel().getSelectedIndex();
+
+        if (index == -1) {
+            return;  //No club member currently selected in the list.
+        }
+
         club.getMembers().remove(index);
 
         if (club.getMembers().isEmpty()) {
@@ -243,9 +248,8 @@ public class ClubDataController {
         if (!dirtyPromptCheck())
             return;
 
-        Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("launch.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("launch.fxml"));
             Stage stage = new Stage();
             stage.setTitle("IntegraDev Club Manager");
             stage.setScene(new Scene(root, 400, 350));
@@ -376,9 +380,10 @@ public class ClubDataController {
      */
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private boolean dirtyPromptCheck() {
-        if (Context.getContext().getCurrentClub().isDirty())
+        if (club.isDirty())
         {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "You have unsaved changes - Save now?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "You have unsaved changes - Save now?",
+                                    ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
             alert.showAndWait();
 
             ButtonType result = alert.getResult();

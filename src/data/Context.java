@@ -6,7 +6,7 @@ import java.io.File;
 
 /**
  * A class which stores the shared state of the application.
- * I prefer to avoid of singletons and use dependency injection for anything beyond simple applications.
+ * I prefer to avoid singletons and use dependency injection for anything beyond simple applications.
  */
 public class Context {
     private final static Context context = new Context();

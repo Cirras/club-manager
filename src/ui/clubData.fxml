@@ -58,18 +58,18 @@
                      <content>
                         <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
                            <items>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="402.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="402.0" SplitPane.resizableWithParent="false">
                                  <children>
-                                    <ListView fx:id="clubMemberList" layoutY="-2.0" prefHeight="322.0" prefWidth="244.0" />
+                                    <ListView fx:id="clubMemberList" layoutY="-2.0" maxHeight="322.0" maxWidth="244.0" minHeight="322.0" minWidth="244.0" prefHeight="322.0" prefWidth="244.0" />
                                  </children>
                               </AnchorPane>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                              <AnchorPane maxHeight="321.0" maxWidth="532.0" minHeight="321.0" minWidth="532.0" prefHeight="321.0" prefWidth="532.0" SplitPane.resizableWithParent="false">
                                  <children>
                                     <TextField fx:id="firstNameField" layoutX="54.0" layoutY="62.0" />
-                                    <TextField fx:id="roleField" layoutX="54.0" layoutY="196.0" />
-                                    <TextField fx:id="emailField" layoutX="54.0" layoutY="127.0" />
                                     <TextField fx:id="lastNameField" layoutX="299.0" layoutY="62.0" />
+                                    <TextField fx:id="emailField" layoutX="54.0" layoutY="127.0" />
                                     <TextField fx:id="phoneNumberField" layoutX="299.0" layoutY="127.0" />
+                                    <TextField fx:id="roleField" layoutX="54.0" layoutY="196.0" />
                                     <Label layoutX="112.0" layoutY="39.0" text="First Name" />
                                     <Label layoutX="358.0" layoutY="39.0" text="Last Name" />
                                     <Label layoutX="130.0" layoutY="105.0" text="Email" />
